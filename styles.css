@@ -41,14 +41,14 @@ section:nth-child(odd) {
     width: 100%;
 }
 
-/* Navbar (diminuída) */
+/* Navbar */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     background-color: var(--white2);
-    padding: 12px 0; /* Reduzido */
+    padding: 12px 0;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
     z-index: 1000;
 }
@@ -60,23 +60,23 @@ section:nth-child(odd) {
 }
 
 .logo {
-    height: 60px; /* Reduzido */
+    height: 60px;
     display: flex;
     align-items: center;
 }
 
 .logo img {
-    height: 60px; /* Reduzido */
+    height: 60px;
     width: auto;
 }
 
 .nav-links a {
     text-decoration: none;
     color: var(--text-dark);
-    margin-left: 32px; /* um pouco menor */
+    margin-left: 32px;
     font-weight: 500;
     transition: color 0.3s ease;
-    font-size: 20px; /* menor */
+    font-size: 20px;
 }
 
 .nav-links a:hover {
@@ -92,7 +92,7 @@ section:nth-child(odd) {
 
 /* Welcome Hero Section */
 .welcome-hero {
-    height: 90vh;
+    min-height: 90vh;
     background: linear-gradient(135deg, var(--gold), var(--sunflower));
     color: var(--white);
     display: flex;
@@ -100,19 +100,26 @@ section:nth-child(odd) {
     position: relative;
     padding-top: 80px;
     padding-left: 40px;
+    /* garante que nada vaze horizontalmente */
+    overflow: hidden;
 }
 
 .welcome-hero .container {
     display: block;
     padding: 0;
     max-width: none;
+    /* impede que o container expanda além da viewport */
+    width: 100%;
 }
 
 .hero-content {
     text-align: left;
-    max-width: 900px;
+    /* limita o texto a no máximo 45% da tela, cedendo espaço à imagem */
+    max-width: min(560px, 45vw);
     margin: 0;
     padding: 0;
+    position: relative;
+    z-index: 2;
 }
 
 .hero-image {
@@ -120,10 +127,13 @@ section:nth-child(odd) {
     right: 5%;
     top: 50%;
     transform: translateY(-50%);
-    max-width: 50%;
+    /* ocupa os 50% direitos, sem invadir o texto */
+    width: 50%;
+    max-width: 680px;
     display: flex;
     align-items: center;
     justify-content: center;
+    z-index: 1;
 }
 
 .hero-image img {
@@ -142,13 +152,14 @@ section:nth-child(odd) {
 .hero-content h1 {
     font-family: "Arial Black", sans-serif;
     font-weight: 900;
-    font-size: 8rem;
+    /* escala suavemente de 3rem (telas ~600px) até 7rem (telas ~1600px) */
+    font-size: clamp(3rem, 5.5vw, 7rem);
     margin-bottom: 18px;
     line-height: 1.1;
 }
 
 .hero-content p {
-    font-size: 1.5rem;
+    font-size: clamp(1rem, 1.4vw, 1.5rem);
     margin-bottom: 30px;
 }
 
@@ -292,7 +303,6 @@ section:nth-child(even) {
     margin-right: 20px;
 }
 
-/* MVV cards com comportamento semelhante aos cards de serviços (interativo) */
 .mvv-card {
     background: linear-gradient(135deg, var(--white) 0%, #fafaf8 100%);
     padding: 40px 32px;
@@ -321,7 +331,7 @@ section:nth-child(even) {
     color: var(--white);
 }
 
-.mvv-details { 
+.mvv-details {
     max-height: 0;
     opacity: 0;
     overflow: hidden;
@@ -961,9 +971,7 @@ body > .detail-hero {
     line-height: 1.7;
 }
 
-/* ================================================
-   ÁREAS DE ATUAÇÃO
-   ================================================ */
+/* Áreas de Atuação */
 .areas {
     padding-bottom: 90px;
 }
@@ -1015,9 +1023,7 @@ body > .detail-hero {
     max-width: 420px;
 }
 
-/* ================================================
-   SERVICE DIVISIONS
-   ================================================ */
+/* Service Divisions */
 .service-divisions {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -1084,9 +1090,7 @@ body > .detail-hero {
     margin-top: 4px;
 }
 
-/* ================================================
-   SERVICE AREAS (catalog)
-   ================================================ */
+/* Service Areas (catalog) */
 .service-areas {
     display: flex;
     flex-direction: column;
@@ -1146,9 +1150,7 @@ body > .detail-hero {
     box-shadow: 0 6px 18px rgba(201,160,0,0.18);
 }
 
-/* ================================================
-   ASSESSORIA LEFAY
-   ================================================ */
+/* Assessoria Lefay */
 .assessoria-layout {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1230,20 +1232,13 @@ body > .detail-hero {
     flex-shrink: 0;
 }
 
-/* Animations de clique para botões */
+/* Animações de clique */
 @keyframes buttonClickPulse {
-    0% {
-        box-shadow: 0 0 0 0 rgba(201, 160, 0, 0.7);
-    }
-    50% {
-        box-shadow: 0 0 0 10px rgba(201, 160, 0, 0);
-    }
-    100% {
-        box-shadow: 0 0 0 0 rgba(201, 160, 0, 0);
-    }
+    0% { box-shadow: 0 0 0 0 rgba(201, 160, 0, 0.7); }
+    50% { box-shadow: 0 0 0 10px rgba(201, 160, 0, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(201, 160, 0, 0); }
 }
 
-/* Animação de ripple effect no clique (efeito de onda) */
 .cta-button::before,
 .submit-button::before,
 .whatsapp-button::before {
@@ -1265,73 +1260,91 @@ body > .detail-hero {
     animation: rippleEffect 0.6s ease-out;
 }
 
-/* Responsive Design */
+/* =============================================
+   RESPONSIVE DESIGN
+   ============================================= */
+
+/* 1200px — ajuste fino de espaçamento e imagem */
 @media (max-width: 1200px) {
     .welcome-hero {
         padding-left: 30px;
     }
-    
+
+    /* max-width em vw garante que o texto nunca toque a imagem */
     .hero-content {
-        max-width: 520px;
+        max-width: min(400px, 42vw);
     }
-    
-    .hero-content h1 {
-        font-size: 5rem;
-    }
-    
-    .hero-content p {
-        font-size: 1.3rem;
-    }
-    
+
     .hero-image {
-        max-width: 48%;
+        width: 48%;
+        right: 2%;
     }
-    
+
     .section-title {
         font-size: 4rem;
     }
 }
 
+/* 992px — layout hero vira coluna, imagem entra no fluxo normal */
 @media (max-width: 992px) {
     .welcome-hero {
-        padding-left: 25px;
-        height: 80vh;
-    }
-    
-    .hero-content {
-        max-width: 480px;
-    }
-    
-    .hero-content h1 {
-        font-size: 4rem;
-    }
-    
-    .hero-content p {
-        font-size: 1.2rem;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        min-height: 80vh;
+        padding: 110px 24px 60px;
+        overflow: hidden;
     }
 
-    .hero-image {
-        max-width: 40%;
-        right: 2%;
+    .welcome-hero .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 32px;
+        width: 100%;
     }
-    
+
+    /* Imagem sai do position:absolute e entra no fluxo normal */
+    .hero-image {
+        position: relative;
+        right: auto;
+        top: auto;
+        transform: none;
+        width: 60%;
+        max-width: 420px;
+        order: -1;
+    }
+
+    .hero-content {
+        max-width: 100%;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* clamp já escala o h1 — apenas fixamos um teto menor para tablets */
+    .hero-content h1 {
+        font-size: clamp(2.4rem, 6vw, 3.4rem);
+    }
+
+    .hero-content p {
+        font-size: 1.15rem;
+    }
+
     .section-title {
         font-size: 3.5rem;
         margin-left: 0;
     }
-    
+
     .about-content {
         margin: 0;
     }
-    
+
     .mvv-grid {
         grid-template-columns: 1fr;
         margin-left: 0;
         margin-right: 0;
-    }
-    
-    .ceo-text p {
-        font-size: 2rem;
     }
 
     .content-wrapper {
@@ -1408,6 +1421,7 @@ body > .detail-hero {
     }
 }
 
+/* 768px — imagem some, texto centralizado, menu mobile */
 @media (max-width: 768px) {
     .container {
         padding: 0 24px;
@@ -1417,7 +1431,7 @@ body > .detail-hero {
         display: block;
         color: var(--text-dark);
     }
-    
+
     .nav-links {
         position: fixed;
         top: 0;
@@ -1433,44 +1447,53 @@ body > .detail-hero {
         transition: right 0.3s ease;
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
     }
-    
+
     .nav-links.active {
         right: 0;
     }
-    
+
     .nav-links a {
         margin: 16px 0;
         font-size: 18px;
     }
-    
+
     .welcome-hero {
-        padding-left: 20px;
-        padding-right: 20px;
+        height: auto;
+        min-height: 75vh;
+        padding: 100px 20px 50px;
         justify-content: center;
+        align-items: center;
     }
-    
+
+    .welcome-hero .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
     .hero-content {
         max-width: 100%;
         text-align: center;
     }
-    
+
     .hero-content h1 {
-        font-size: 3.5rem;
+        font-size: clamp(2rem, 7vw, 2.8rem);
     }
-    
+
     .hero-content p {
-        font-size: 1.2rem;
+        font-size: 1.05rem;
         margin-bottom: 24px;
     }
 
+    /* Imagem ocultada em mobile */
     .hero-image {
         display: none;
     }
-    
+
     .section-title {
         font-size: 3rem;
     }
-    
+
     .services-grid {
         grid-template-columns: 1fr;
     }
@@ -1480,8 +1503,14 @@ body > .detail-hero {
     }
 
     .service-divisions {
-        grid-template-columns: 1fr;
-        max-width: 340px;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        max-width: 100%;
+    }
+
+    .division-card img {
+        width: 60px;
+        height: 60px;
     }
 
     .detail-hero {
@@ -1561,69 +1590,70 @@ body > .detail-hero {
         font-size: 1.5rem;
     }
 
-    .service-divisions {
-        grid-template-columns: repeat(3, 1fr);
-        gap: 16px;
-    }
-
-    .division-card img {
-        width: 60px;
-        height: 60px;
-    }
-
     .about-content p {
         font-size: 1.2rem;
     }
-    
+
     .about-content h3 {
         font-size: 3rem;
     }
 }
 
+/* 576px — ajuste fino para celulares pequenos */
 @media (max-width: 576px) {
     .container {
         padding: 0 20px;
     }
 
     .welcome-hero {
-        padding-left: 20px;
-        padding-right: 20px;
+        min-height: 70vh;
+        padding: 90px 20px 40px;
     }
-    
+
     .logo img {
         height: 52px;
     }
-    
+
     .hero-content h1 {
-        font-size: 2.8rem;
+        font-size: clamp(1.8rem, 8vw, 2.2rem);
     }
-    
+
     .hero-content p {
-        font-size: 1.1rem;
+        font-size: 0.95rem;
     }
-    
+
     .cta-button {
         padding: 12px 28px;
         font-size: 0.95rem;
     }
-    
+
     .section-title {
         font-size: 2.4rem;
     }
-    
+
     .about-content p {
         font-size: 1rem;
     }
-    
+
+    .about-content h3 {
+        font-size: 2.4rem;
+    }
+
     .update-notice p {
         font-size: 0.95rem;
     }
-    
+
     .contact-form {
         max-width: 100%;
     }
-    
+
     .submit-button {
         font-size: 1.2rem;
+    }
+
+    .service-divisions {
+        grid-template-columns: 1fr;
+        max-width: 300px;
+        margin: 0 auto 40px;
     }
 }
