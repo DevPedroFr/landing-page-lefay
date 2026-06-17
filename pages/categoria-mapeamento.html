@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapeamento Organizacional | Lefay</title>
+    <link rel="icon" type="image/png" href="../images/favicon.png" sizes="64x64">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="../images/Prancheta 15.png" alt="Lefay Logo">
+            </div>
+            <div class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="../index.html#about">Quem somos</a>
+                <a href="../index.html#metodologia">Metodologia</a>
+                <a href="../index.html#services">Serviços</a>
+                <a href="../index.html#assessoria">Assessoria</a>
+                <a href="../index.html#contact">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="service-detail-hero">
+        <div class="container">
+            <a href="../index.html#services" class="back-button">
+                <i class="fas fa-arrow-left"></i> Voltar
+            </a>
+            <div class="service-hero-content">
+                <span class="service-badge">CATEGORIA</span>
+                <h1 class="service-detail-title"><span class="highlight">Mapeamento</span> Organizacional</h1>
+                <p class="service-detail-subtitle">Mapeamento detalhado de processos, perfis e dinâmicas organizacionais para otimizar a gestão e o desempenho da empresa.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-detail-content">
+        <div class="container">
+            <div class="service-detail-categories">
+                
+                <div class="service-category-group">
+                    <div class="category-header">
+                        <span class="category-icon"><i class="fas fa-users-cog"></i></span>
+                        <h2 class="service-category-title">Mapeamento de Perfil</h2>
+                    </div>
+                    <div class="service-category-items">
+                        <div class="service-category-item">Mapeamento de perfil comportamental</div>
+                        <div class="service-category-item">Mapeamento de perfil comportamental por setor</div>
+                        <div class="service-category-item">Mapeamento de perfil comportamental das equipes</div>
+                    </div>
+                </div>
+
+                <div class="service-category-group">
+                    <div class="category-header">
+                        <span class="category-icon"><i class="fas fa-briefcase"></i></span>
+                        <h2 class="service-category-title">Mapeamento de Funções</h2>
+                    </div>
+                    <div class="service-category-items">
+                        <div class="service-category-item">Mapeamento de funções para identificar sobrecarga</div>
+                        <div class="service-category-item">Mapeamento de funções para automações</div>
+                        <div class="service-category-item">Mapeamento de gargalos por setor</div>
+                    </div>
+                </div>
+
+                <div class="service-category-group">
+                    <div class="category-header">
+                        <span class="category-icon"><i class="fas fa-smile"></i></span>
+                        <h2 class="service-category-title">Mapeamento de Satisfação</h2>
+                    </div>
+                    <div class="service-category-items">
+                        <div class="service-category-item">Mapeamento de satisfações e insatisfações</div>
+                        <div class="service-category-item">Mapeamento de dificuldades com metas</div>
+                    </div>
+                </div>
+
+                <div class="service-category-group">
+                    <div class="category-header">
+                        <span class="category-icon"><i class="fas fa-comment"></i></span>
+                        <h2 class="service-category-title">Mapeamento de Comunicação</h2>
+                    </div>
+                    <div class="service-category-items">
+                        <div class="service-category-item">Mapeamento de comunicação interna verbal e não verbal</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Lefay. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navLinks.classList.toggle('active');
+            });
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                });
+            });
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.navbar')) {
+                    navLinks.classList.remove('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

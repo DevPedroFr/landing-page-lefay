@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serviços para Gestores | Lefay</title>
+    <link rel="icon" type="image/png" href="../images/favicon.png" sizes="64x64">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="../images/Prancheta 15.png" alt="Lefay Logo">
+            </div>
+            <div class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="../index.html#about">Quem somos</a>
+                <a href="../index.html#metodologia">Metodologia</a>
+                <a href="../index.html#services">Serviços</a>
+                <a href="../index.html#assessoria">Assessoria</a>
+                <a href="../index.html#contact">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="service-detail-hero">
+        <div class="container">
+            <a href="../index.html#services" class="back-button">
+                <i class="fas fa-arrow-left"></i> Voltar
+            </a>
+            <div class="service-hero-content">
+                <span class="service-badge">GESTORES</span>
+                <h1 class="service-detail-title">Para <span class="highlight">Gestores</span></h1>
+                <p class="service-detail-subtitle">Serviços voltados para desenvolvimento de liderança, gestão de equipes, alinhamento organizacional e comunicação entre liderança e colaboradores.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-detail-content">
+        <div class="container">
+            <div class="service-detail-categories">
+                
+                <div class="service-category-group">
+                    <div class="category-header">
+                        <span class="category-icon"><i class="fas fa-users"></i></span>
+                        <h2 class="service-category-title">Liderança</h2>
+                    </div>
+                    <div class="service-category-items">
+                        <div class="service-category-item">Treinamento para gestores sobre liderança</div>
+                        <div class="service-category-item">Treinamento sobre comunicação assertiva para líderes</div>
+                        <div class="service-category-item">Treinamento para condução de feedbacks</div>
+                        <div class="service-category-item">Treinamento para gestão de equipes</div>
+                    </div>
+                </div>
+
+                <div class="service-category-group">
+                    <div class="category-header">
+                        <span class="category-icon"><i class="fas fa-bullhorn"></i></span>
+                        <h2 class="service-category-title">Comunicação e Gestão</h2>
+                    </div>
+                    <div class="service-category-items">
+                        <div class="service-category-item">Padronização para feedbacks</div>
+                        <div class="service-category-item">Padronização de mensagens humanizadas para atendimento</div>
+                        <div class="service-category-item">Sistemática interna de comunicação para líderes e equipes</div>
+                        <div class="service-category-item">Criação de onboarding para cargos de liderança</div>
+                    </div>
+                </div>
+
+                <div class="service-category-group">
+                    <div class="category-header">
+                        <span class="category-icon"><i class="fas fa-search"></i></span>
+                        <h2 class="service-category-title">Diagnósticos e Mapeamentos</h2>
+                    </div>
+                    <div class="service-category-items">
+                        <div class="service-category-item">Diagnóstico de satisfação de gestão</div>
+                        <div class="service-category-item">Diagnóstico de alinhamento cultural</div>
+                        <div class="service-category-item">Diagnóstico de comunicação interna</div>
+                        <div class="service-category-item">Diagnóstico de perfil comportamental por setor</div>
+                        <div class="service-category-item">Mapeamento de perfil comportamental das equipes</div>
+                        <div class="service-category-item">Mapeamento de dificuldades com metas</div>
+                        <div class="service-category-item">Mapeamento de comunicação interna verbal e não verbal</div>
+                        <div class="service-category-item">Mapeamento de gargalos por setor</div>
+                    </div>
+                </div>
+
+                <div class="service-category-group">
+                    <div class="category-header">
+                        <span class="category-icon"><i class="fas fa-cogs"></i></span>
+                        <h2 class="service-category-title">Implementação</h2>
+                    </div>
+                    <div class="service-category-items">
+                        <div class="service-category-item">Implementação de novos processos e/ou ferramentas</div>
+                        <div class="service-category-item">Treinamento de implantação de processos</div>
+                        <div class="service-category-item">Treinamento para adaptação de equipes a mudanças organizacionais</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Lefay. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navLinks.classList.toggle('active');
+            });
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                });
+            });
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.navbar')) {
+                    navLinks.classList.remove('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagnóstico Organizacional | Lefay</title>
+    <link rel="icon" type="image/png" href="../images/favicon.png" sizes="64x64">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <img src="../images/Prancheta 15.png" alt="Lefay Logo">
+            </div>
+            <div class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="../index.html#about">Quem somos</a>
+                <a href="../index.html#metodologia">Metodologia</a>
+                <a href="../index.html#services">Serviços</a>
+                <a href="../index.html#assessoria">Assessoria</a>
+                <a href="../index.html#contact">Contato</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="service-detail-hero">
+        <div class="container">
+            <a href="../index.html#services" class="back-button">
+                <i class="fas fa-arrow-left"></i> Voltar
+            </a>
+            <div class="service-hero-content">
+                <span class="service-badge">CATEGORIA</span>
+                <h1 class="service-detail-title"><span class="highlight">Diagnóstico</span> Organizacional</h1>
+                <p class="service-detail-subtitle">Análises aprofundadas para identificar desafios, oportunidades e direcionar decisões mais estratégicas para sua organização.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="service-detail-content">
+        <div class="container">
+            <div class="service-detail-categories">
+                
+                <div class="service-category-group">
+                    <div class="category-header">
+                        <span class="category-icon"><i class="fas fa-user-check"></i></span>
+                        <h2 class="service-category-title">Diagnóstico de Pessoas</h2>
+                    </div>
+                    <div class="service-category-items">
+                        <div class="service-category-item">Diagnóstico de satisfação do colaborador</div>
+                        <div class="service-category-item">Diagnóstico de satisfação geral</div>
+                        <div class="service-category-item">Diagnóstico de satisfação de gestão</div>
+                        <div class="service-category-item">Diagnóstico de perfil comportamental por setor</div>
+                        <div class="service-category-item">Diagnóstico de alinhamento cultural</div>
+                    </div>
+                </div>
+
+                <div class="service-category-group">
+                    <div class="category-header">
+                        <span class="category-icon"><i class="fas fa-heartbeat"></i></span>
+                        <h2 class="service-category-title">Diagnóstico de Riscos</h2>
+                    </div>
+                    <div class="service-category-items">
+                        <div class="service-category-item">Diagnóstico de riscos psicossociais (NR-1)</div>
+                        <div class="service-category-item">Diagnóstico de rotatividade geral e por setor</div>
+                    </div>
+                </div>
+
+                <div class="service-category-group">
+                    <div class="category-header">
+                        <span class="category-icon"><i class="fas fa-cogs"></i></span>
+                        <h2 class="service-category-title">Diagnóstico de Processos</h2>
+                    </div>
+                    <div class="service-category-items">
+                        <div class="service-category-item">Diagnóstico de gargalos em procedimentos</div>
+                        <div class="service-category-item">Diagnóstico de comunicação interna</div>
+                        <div class="service-category-item">Mapeamento de gargalos por setor</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Lefay. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const navLinks = document.getElementById('navLinks');
+        if (menuToggle && navLinks) {
+            menuToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                navLinks.classList.toggle('active');
+            });
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navLinks.classList.remove('active');
+                });
+            });
+            document.addEventListener('click', (e) => {
+                if (!e.target.closest('.navbar')) {
+                    navLinks.classList.remove('active');
+                }
+            });
+        }
+    </script>
+</body>
+</html>
