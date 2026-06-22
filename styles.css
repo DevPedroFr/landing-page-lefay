@@ -144,9 +144,9 @@ section {
 }
 
 .hero-content h1 {
-    font-size: clamp(3.5rem, 7vw, 5.5rem);
+    font-size: clamp(4.5rem, 9vw, 7rem);
     margin-bottom: 18px;
-    line-height: 1.15;
+    line-height: 1.1;
     max-width: 100%;
     word-wrap: break-word;
 }
@@ -157,10 +157,11 @@ section {
 }
 
 .hero-content p {
-    font-size: clamp(1.1rem, 1.6vw, 1.6rem);
+    font-size: clamp(1.15rem, 1.55vw, 1.55rem);
     margin-bottom: 30px;
-    max-width: 80%;
+    max-width: 100%;
 }
+
 
 .cta-button {
     display: inline-block;
@@ -175,6 +176,7 @@ section {
     position: relative;
     overflow: hidden;
 }
+
 
 .cta-button:hover {
     transform: translateY(-3px);
@@ -569,6 +571,104 @@ section {
     align-items: center;
 }
 
+/* Assessoria LeFay - CTA card (estilo metodologia-hero-box) */
+.assessoria-cta-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.assessoria-cta-box {
+    display: grid;
+    grid-template-columns: 76px 1fr auto;
+    gap: 32px;
+    align-items: center;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--light-gold) 100%);
+    border-radius: 36px;
+    padding: 44px 56px;
+    box-shadow: 0 16px 48px rgba(201,160,0,0.18);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.assessoria-cta-link:hover .assessoria-cta-box {
+    transform: translateY(-6px);
+    box-shadow: 0 22px 56px rgba(201,160,0,0.28);
+}
+
+.assessoria-cta-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 76px;
+    height: 76px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.18);
+    color: var(--white);
+    font-size: 2.1rem;
+    flex-shrink: 0;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.3s ease;
+}
+
+.assessoria-cta-link:hover .assessoria-cta-icon {
+    transform: scale(1.1) rotate(-6deg);
+    background: rgba(255,255,255,0.28);
+}
+
+.assessoria-cta-text h3 {
+    font-size: 2.2rem;
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+}
+
+.assessoria-cta-text h3 .highlight {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.assessoria-cta-sub {
+    font-size: 1rem;
+    color: var(--white);
+    opacity: 0.92;
+    line-height: 1.6;
+    max-width: 520px;
+}
+
+.assessoria-cta-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    white-space: nowrap;
+    padding: 12px 26px;
+    background: var(--white);
+    color: var(--gold);
+    border-radius: 30px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.assessoria-cta-indicator i {
+    transition: transform 0.3s ease;
+}
+
+.assessoria-cta-link:hover .assessoria-cta-indicator {
+    transform: translateX(4px);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.assessoria-cta-link:hover .assessoria-cta-indicator i {
+    transform: translateX(4px);
+}
+
 /* Service Category Buttons - Novos botões na página principal */
 .service-category-buttons {
     display: grid;
@@ -748,7 +848,7 @@ section {
    ============================================= */
 
 .service-detail-hero {
-    background: var(--brand-white);
+    background: var(--white);
     color: var(--text-dark);
     padding: 130px 0 60px;
     text-align: center;
@@ -801,26 +901,112 @@ section {
 /* Content */
 .service-detail-content {
     padding: 60px 0 80px;
-    background-color: var(--brand-white);
+    background-color: var(--white);
 }
 
 .service-detail-categories {
     display: flex;
     flex-direction: column;
-    gap: 32px;
-    max-width: 1000px;
-    margin: 0 auto;
 }
 
 .service-category-group {
-    background: var(--white);
-    border-radius: 20px;
-    padding: 32px 36px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
-    border: 1px solid #f0f0f0;
-    transition: all 0.3s ease;
-    animation: fadeInUp 0.6s ease forwards;
-    opacity: 0;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+.service-category-group:nth-child(odd) {
+    background-color: var(--white);
+}
+
+.service-category-group:nth-child(even) {
+    background-color: var(--sunflower);
+}
+
+.service-category-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.service-category-icon-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 28px;
+}
+
+.service-category-big-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gold);
+    font-size: 5rem;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+
+.service-category-big-iconn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text-dark);
+    font-size: 5rem;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.service-category-icon-area:hover .service-category-big-icon {
+    transform: scale(1.15) rotate(-6deg);
+}
+
+.service-category-icon-area:hover .service-category-big-iconn {
+    transform: scale(1.15) rotate(-6deg);
+}
+
+.service-category-title {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 3.4rem;
+    color: var(--text-dark);
+    line-height: 1.15;
+    margin: 0;
+}
+
+.service-category-titlee {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    font-size: 3.4rem;
+    color: var(--gold);
+    line-height: 1.15;
+    margin: 0;
+}
+
+.service-category-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.service-category-item {
+    padding: 18px 0 18px 24px;
+    border-left: 2px solid var(--gold);
+    background: none;
+    box-shadow: none;
+    border-radius: 0;
+    opacity: 0.85;
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    line-height: 1.55;
+    transition: opacity 0.3s ease, border-left-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+}
+
+.service-category-item:hover {
+    opacity: 1;
+    border-left-color: var(--light-gold);
+    transform: translateX(6px);
 }
 
 .service-category-group:nth-child(1) { animation-delay: 0.1s; }
@@ -831,12 +1017,6 @@ section {
 .service-category-group:nth-child(6) { animation-delay: 0.6s; }
 .service-category-group:nth-child(7) { animation-delay: 0.7s; }
 .service-category-group:nth-child(8) { animation-delay: 0.8s; }
-
-.service-category-group:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 30px rgba(201, 160, 0, 0.08);
-    border-color: var(--gold);
-}
 
 .category-header {
     display: flex;
@@ -860,45 +1040,11 @@ section {
     flex-shrink: 0;
 }
 
-.service-category-title {
-    font-family: 'Playfair Display', serif;
-    font-weight: 700;
-    font-size: 1.4rem;
-    color: var(--text-dark);
-    margin: 0;
-}
-
-.service-category-items {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 10px;
-}
-
-.service-category-item {
-    padding: 14px 20px;
-    background: var(--brand-white);
-    border-radius: 12px;
-    font-size: 0.95rem;
-    color: var(--text-dark);
-    border: 1px solid #f0f0f0;
-    transition: all 0.25s ease;
-    cursor: default;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
 .service-category-item::before {
     content: '◆';
-    color: var(--gold);
-    font-size: 0.6rem;
-    opacity: 0.6;
-}
-
-.service-category-item:hover {
-    border-color: var(--gold);
-    background: var(--sunflower);
-    transform: translateX(6px);
+    color: var(--white);
+    font-size: 0.55rem;
+    opacity: 0.8;
 }
 
 /* Back Button */
@@ -998,6 +1144,19 @@ section {
     line-height: 1.2;
     margin-bottom: 16px;
     font-family: 'Arial', sans-serif;
+}
+
+.metodologia .text-center {
+    max-width: 900px;
+    margin: 0 auto 50px;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.metodologia .text-center p {
+    font-size: 1.25rem;
+    line-height: 1.8;
+    color: var(--text-dark);
 }
 
 .metodologia-hero-text h3 .highlight {
@@ -1103,6 +1262,109 @@ section {
     line-height: 1.7;
 }
 
+
+
+/* Intro de descrição do serviço */
+.service-detail-intro {
+    max-width: 900px;
+    margin: 0 auto 60px;
+}
+
+.service-detail-intro p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-dark);
+    margin-bottom: 18px;
+}
+
+.service-detail-intro p:last-child {
+    margin-bottom: 0;
+}
+
+/* Seção de impactos esperados */
+.impacts-section {
+    margin-bottom: 70px;
+}
+
+.impacts-title {
+    font-family: 'Arial', sans-serif;
+    font-size: 1.8rem;
+    text-align: center;
+    color: var(--text-dark);
+    max-width: 800px;
+    margin: 0 auto 48px;
+    line-height: 1.4;
+}
+
+.impacts-title .highlight {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--gold);
+}
+
+.impacts-subtext {
+    text-align: center;
+    font-size: 1.05rem;
+    color: #555;
+    max-width: 760px;
+    margin: -24px auto 40px;
+    line-height: 1.7;
+}
+
+.impacts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.impact-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+}
+
+.impact-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    background: var(--sunflower);
+    color: var(--gold);
+    font-size: 1.6rem;
+    box-shadow: 0 8px 20px rgba(201, 160, 0, 0.15);
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), 
+                background 0.4s ease, 
+                box-shadow 0.4s ease,
+                color 0.4s ease;
+}
+
+.impact-item:hover .impact-icon {
+    transform: scale(1.12) rotate(8deg);
+    background: var(--gold);
+    color: var(--white);
+    box-shadow: 0 14px 32px rgba(201, 160, 0, 0.35);
+}
+
+.impact-item:hover .impact-icon i {
+    animation: iconPulse 0.6s ease;
+}
+
+@keyframes iconPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+.impact-item p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: var(--text-dark);
+    max-width: 220px;
+}
+
 /* Áreas de Atuação */
 .areas {
     padding-bottom: 90px;
@@ -1122,24 +1384,60 @@ section {
     padding: 0 20px;
 }
 
-.area-tile {
-    padding: 52px 52px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 240px;
+.area-tile-wrapper {
+    perspective: 1800px;
+}
+
+.flip-card {
+    background: none;
+    padding: 0;
+    min-height: 340px;
     border-radius: 28px;
 }
 
-.area-tile--gold {
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-height: 340px;
+    transition: transform 0.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+.area-tile-wrapper:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    border-radius: 28px;
+    padding: 40px 44px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.area-tile--gold .flip-card-front,
+.area-tile--gold .flip-card-back {
     background: var(--gold);
 }
 
-.area-tile--light {
+.area-tile--light .flip-card-front,
+.area-tile--light .flip-card-back {
     background: var(--sunflower);
 }
 
-.area-tile h3 {
+.flip-card-back {
+    transform: rotateY(180deg);
+    justify-content: center;
+    gap: 8px;
+}
+
+.flip-card-front h3 {
     font-size: 1.9rem;
     color: var(--text-dark);
     margin-bottom: 16px;
@@ -1147,16 +1445,62 @@ section {
     font-family: 'Arial', sans-serif;
 }
 
-.area-tile h3 .highlight {
+.flip-card-front h3 .highlight {
     font-family: 'Playfair Display', serif;
     font-weight: 700;
 }
 
-.area-tile p {
+.flip-card-front p {
     font-size: 1rem;
     line-height: 1.75;
     color: var(--text-dark);
     max-width: 420px;
+}
+
+.flip-back-text {
+    font-size: 0.78rem;
+    line-height: 1.4;
+    color: var(--text-dark);
+    margin-bottom: 8px;
+}
+
+.flip-back-label {
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    margin-bottom: 6px;
+}
+
+.flip-back-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.flip-back-list li {
+    font-size: 0.74rem;
+    line-height: 1.25;
+    color: var(--text-dark);
+    padding-left: 16px;
+    position: relative;
+}
+
+.flip-back-list li::before {
+    content: '–';
+    position: absolute;
+    left: 0;
+    font-weight: 700;
+}
+
+.flip-back-more {
+    font-size: 0.72rem;
+    color: var(--text-dark);
+    opacity: 0.7;
+    margin-top: 4px;
+    font-style: italic;
 }
 
 /* Assessoria Lefay */
@@ -1389,6 +1733,197 @@ section {
     transform: scale(1.04) translateY(-6px);
 }
 
+/* =============================================
+   PÁGINA ASSESSORIA LEFAY
+   ============================================= */
+
+/* O que fazemos - feature cards com check */
+.assessoria-features-section {
+    margin-bottom: 90px;
+}
+
+.assessoria-features-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-bottom: 36px;
+}
+
+.assessoria-feature-card {
+    background: linear-gradient(135deg, var(--white) 0%, #fafaf8 100%);
+    border-radius: 24px;
+    padding: 36px 30px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+    border-top: 4px solid var(--gold);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.assessoria-feature-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+}
+
+.assessoria-feature-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--gold);
+    color: var(--white);
+    font-size: 1.1rem;
+    margin-bottom: 18px;
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.assessoria-feature-card:hover .assessoria-feature-check {
+    transform: scale(1.12) rotate(8deg);
+}
+
+.assessoria-feature-card h3 {
+    font-size: 1.25rem;
+    color: var(--text-dark);
+    margin-bottom: 12px;
+    font-family: 'Arial', sans-serif;
+}
+
+.assessoria-feature-card p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.7;
+}
+
+.assessoria-features-note {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 1rem;
+    color: var(--text-dark);
+    opacity: 0.8;
+    line-height: 1.8;
+    font-style: italic;
+}
+
+/* Como funciona - jornada / timeline */
+.assessoria-jornada {
+    background: var(--white);
+    padding: 100px 0;
+}
+
+.assessoria-jornada .impacts-title {
+    margin-bottom: 64px;
+}
+
+.jornada-timeline {
+    max-width: 860px;
+    margin: 0 auto;
+    position: relative;
+    padding-left: 50px;
+    border-left: 3px solid var(--gold);
+}
+
+.jornada-step {
+    position: relative;
+    padding-bottom: 56px;
+}
+
+.jornada-step--last {
+    padding-bottom: 0;
+}
+
+.jornada-step-number {
+    position: absolute;
+    left: -50px;
+    top: -6px;
+    width: 64px;
+    height: 64px;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--light-gold) 100%);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+    box-shadow: 0 8px 20px rgba(201,160,0,0.3);
+}
+
+.jornada-step-number .highlight {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+.jornada-step-content {
+    background: var(--white);
+    border: 1px solid #f0e9d2;
+    border-radius: 22px;
+    padding: 28px 32px;
+    margin-left: 16px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.jornada-step-content:hover {
+    transform: translateX(6px);
+    box-shadow: 0 10px 28px rgba(0,0,0,0.1);
+}
+
+.jornada-step-content h3 {
+    font-size: 1.35rem;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+}
+
+.jornada-step-content p {
+    font-size: 0.98rem;
+    color: #555;
+    line-height: 1.75;
+}
+
+/* CTA final da página de assessoria */
+.assessoria-final-cta {
+    max-width: 760px;
+    margin: 90px auto 0;
+    text-align: center;
+    background: linear-gradient(135deg, var(--gold) 0%, var(--light-gold) 100%);
+    border-radius: 36px;
+    padding: 56px 48px;
+    box-shadow: 0 16px 48px rgba(201,160,0,0.2);
+}
+
+.assessoria-final-cta h3 {
+    font-size: 2.2rem;
+    color: var(--white);
+    margin-bottom: 16px;
+    font-family: 'Arial', sans-serif;
+}
+
+.assessoria-final-cta h3 .highlight {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+}
+
+.assessoria-final-cta p {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.92);
+    margin-bottom: 28px;
+    line-height: 1.6;
+}
+
+.cta-button--dark {
+    background-color: var(--white);
+    color: var(--gold);
+}
+
+.cta-button--dark:hover {
+    background-color: var(--text-dark);
+    color: var(--white);
+}
+
 /* Animações de clique */
 @keyframes buttonClickPulse {
     0% { box-shadow: 0 0 0 0 rgba(201, 160, 0, 0.7); }
@@ -1438,6 +1973,10 @@ section {
     .section-title {
         font-size: 4rem;
     }
+    
+    .hero-content h1 {
+        font-size: clamp(4rem, 8vw, 6.5rem);
+    }
 }
 
 @media (max-width: 992px) {
@@ -1449,6 +1988,33 @@ section {
         min-height: 80vh;
         padding: 110px 24px 60px;
         overflow: hidden;
+    }
+
+    .service-category-group {
+        padding: 36px 32px;
+    }
+
+    .service-category-inner {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .service-category-title,
+    .service-category-titlee {
+        font-size: 2.2rem;
+    }
+
+    .service-category-icon-area {
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .service-category-items {
+        grid-template-columns: 1fr;
+    }
+
+    .service-category-item {
+        font-size: 1.05rem;
     }
 
     .welcome-hero .container {
@@ -1466,7 +2032,7 @@ section {
     }
 
     .hero-content h1 {
-        font-size: clamp(3rem, 7vw, 4.5rem);
+        font-size: clamp(3.8rem, 9vw, 5.5rem);
     }
 
     .hero-content p {
@@ -1544,6 +2110,37 @@ section {
         max-width: 400px;
     }
 
+    .assessoria-cta-box {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 36px 28px;
+        gap: 20px;
+        justify-items: center;
+    }
+
+    .assessoria-cta-sub {
+        max-width: 100%;
+    }
+
+    .assessoria-features-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .jornada-timeline {
+        padding-left: 40px;
+    }
+
+    .jornada-step-number {
+        left: -40px;
+        width: 54px;
+        height: 54px;
+        font-size: 1.1rem;
+    }
+
+    .jornada-step-content {
+        padding: 22px 24px;
+    }
+
     .service-category-buttons {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -1584,6 +2181,20 @@ section {
 @media (max-width: 768px) {
     .container {
         padding: 0 24px;
+    }
+
+    .metodologia .text-center p {
+        font-size: 1.05rem;
+    }
+
+
+    .impacts-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+    }
+
+    .impacts-title {
+        font-size: 1.4rem;
     }
 
     .menu-toggle {
@@ -1637,7 +2248,7 @@ section {
     }
 
     .hero-content h1 {
-        font-size: clamp(2.5rem, 8vw, 3.8rem);
+        font-size: clamp(3.2rem, 10vw, 4.8rem);
     }
 
     .hero-content p {
@@ -1657,6 +2268,15 @@ section {
     .service-divisions {
         grid-template-columns: 1fr;
         max-width: 100%;
+    }
+
+    .assessoria-cta-box {
+        padding: 30px 22px;
+        border-radius: 28px;
+    }
+
+    .assessoria-cta-text h3 {
+        font-size: 1.8rem;
     }
 
     .service-category-buttons {
@@ -1747,7 +2367,8 @@ section {
         padding: 24px 20px;
     }
 
-    .service-category-title {
+    .service-category-title,
+    .service-category-titlee {
         font-size: 1.2rem;
     }
 
@@ -1787,11 +2408,65 @@ section {
     .service-category-btn .btn-label {
         font-size: 0.9rem;
     }
+
+    .assessoria-features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .assessoria-jornada {
+        padding: 70px 0;
+    }
+
+    .jornada-timeline {
+        padding-left: 32px;
+    }
+
+    .jornada-step-number {
+        left: -32px;
+        width: 46px;
+        height: 46px;
+        font-size: 1rem;
+    }
+
+    .jornada-step-content {
+        margin-left: 10px;
+        padding: 20px 22px;
+    }
+
+    .jornada-step-content h3 {
+        font-size: 1.15rem;
+    }
+
+    .assessoria-final-cta {
+        padding: 40px 28px;
+        margin-top: 60px;
+    }
+
+    .assessoria-final-cta h3 {
+        font-size: 1.7rem;
+    }
 }
 
 @media (max-width: 576px) {
     .container {
         padding: 0 20px;
+    }
+
+
+    .service-category-title,
+    .service-category-titlee {
+        font-size: 1.6rem;
+    }
+
+    .service-category-big-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.6rem;
+    }
+
+
+    .impacts-grid {
+        grid-template-columns: 1fr;
     }
 
     .welcome-hero {
@@ -1804,8 +2479,8 @@ section {
     }
 
     .hero-content h1 {
-        font-size: clamp(2rem, 9vw, 3rem);
-        line-height: 1.2;
+        font-size: clamp(2.8rem, 11vw, 4rem);
+        line-height: 1.15;
     }
 
     .hero-content p {
@@ -1902,5 +2577,54 @@ section {
     .service-category-btn .btn-count {
         font-size: 0.7rem;
         margin-left: auto;
+    }
+
+    .assessoria-cta-box {
+        padding: 26px 18px;
+        gap: 16px;
+    }
+
+    .assessoria-cta-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.6rem;
+    }
+
+    .assessoria-cta-text h3 {
+        font-size: 1.5rem;
+    }
+
+    .assessoria-cta-sub {
+        font-size: 0.9rem;
+    }
+
+    .assessoria-cta-indicator {
+        font-size: 0.75rem;
+        padding: 10px 20px;
+    }
+
+    .impacts-subtext {
+        font-size: 0.95rem;
+        margin-top: -16px;
+    }
+
+    .jornada-timeline {
+        padding-left: 26px;
+    }
+
+    .jornada-step-number {
+        left: -26px;
+        width: 40px;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+
+    .jornada-step-content {
+        margin-left: 6px;
+        padding: 18px 18px;
+    }
+
+    .assessoria-feature-card {
+        padding: 28px 22px;
     }
 }
