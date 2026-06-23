@@ -7,11 +7,11 @@
     <link rel="icon" type="image/png" href="images/favicon.png" sizes="64x64">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <nav class="navbar">
-        <div class="container">
+        <div class="container navbar-inner">
             <div class="logo">
                 <img src="images/Prancheta 15.png" alt="Lefay Logo">
             </div>
@@ -23,165 +23,165 @@
                 <a href="#metodologia">Metodologia</a>
                 <a href="#services">Serviços</a>
                 <a href="#assessoria">Assessoria</a>
-                <a href="#contact">Contato</a>
+                <a href="#contact" class="nav-cta">Contato</a>
             </div>
         </div>
     </nav>
 
+    <!-- HERO -->
     <header class="welcome-hero">
-        <div class="container">
+        <div class="container hero-grid">
             <div class="hero-content">
-                <h1>O melhor de dentro, <span class="highlight">para o</span> <span class="highlight">mundo</span></h1>
+                <span class="service-badge">ENDOMARKETING &amp; CULTURA ORGANIZACIONAL</span>
+                <h1>O melhor de dentro,<br><span class="highlight">para o mundo</span></h1>
                 <p>Ajudamos empresas a identificar e resolver os fatores que impactam engajamento, comunicação, desempenho e permanência dos colaboradores.</p>
-                <a href="#contact" class="cta-button">CONTE-NOS SEU DESAFIO</a>
+                <a href="#contact" class="cta-button">Conte-nos seu desafio</a>
             </div>
             <div class="hero-image">
                 <img src="./iconografia/Collab-pana.png" alt="LeFay">
             </div>
-            <div class="scroll-indicator">
-                <p>Role para descobrir mais</p>
-                <i class="fas fa-chevron-down bounce"></i>
-            </div>
+        </div>
+        <div class="scroll-indicator">
+            <p>Role para descobrir mais</p>
+            <i class="fas fa-chevron-down bounce"></i>
         </div>
     </header>
 
-
+    <!-- METODOLOGIA -->
     <section class="metodologia" id="metodologia">
-        <div class="container">
-            <div class="text-center">
-                <p>
-                    A LeFay identifica os fatores humanos, comportamentais e organizacionais que limitam o crescimento das empresas e transforma esses diagnósticos em estratégias práticas de desenvolvimento, comunicação e cultura organizacional
-                </p>
-            </div>
-            <div class="metodologia-hero-box">
-                <div class="metodologia-hero-text">
-                    <h3>Metodologia baseada em <span class="highlight">neurociência</span></h3>
-                    <p class="metodologia-sub">A nossa metodologia combina a neurociência aplicada à análise organizacional e às estratégias de desenvolvimento humano para compreender a dinâmica das pessoas e das organizações. Nosso objetivo é identificar padrões cognitivos, comportamentais e relacionais, presentes tanto no consciente quanto no inconsciente, que influenciam a comunicação, o engajamento e a tomada de decisões. A partir dessas informações, desenvolvemos diagnósticos e soluções alinhados à realidade da empresa e aos resultados que ela busca alcançar.</p>
+
+        <div class="block block--light">
+            <div class="container block-inner">
+                <div class="block-icon-area">
+                    <span class="block-big-icon"><i class="fas fa-brain"></i></span>
+                    <h2 class="block-title">Metodologia baseada em <span class="highlight">neurociência</span></h2>
                 </div>
-                <div class="metodologia-hero-img">
-                    <img src="./iconografia/Learning-amico.png" alt="Metodologia LeFay">
+                <div class="block-text-area">
+                    <p class="block-lede">A LeFay identifica os fatores humanos, comportamentais e organizacionais que limitam o crescimento das empresas e transforma esses diagnósticos em estratégias práticas de desenvolvimento, comunicação e cultura organizacional.</p>
+                    <p>A nossa metodologia combina a neurociência aplicada à análise organizacional e às estratégias de desenvolvimento humano para compreender a dinâmica das pessoas e das organizações. Nosso objetivo é identificar padrões cognitivos, comportamentais e relacionais, presentes tanto no consciente quanto no inconsciente, que influenciam a comunicação, o engajamento e a tomada de decisões. A partir dessas informações, desenvolvemos diagnósticos e soluções alinhados à realidade da empresa e aos resultados que ela busca alcançar.</p>
                 </div>
             </div>
         </div>
-        <div class="container">
-            <h2 class="section-titlee">A metodologia <span class="highlight">nas</span> <span class="highlight">etapas</span></h2>
-            <div class="etapas-grid">
-                <div class="etapa-card">
-                    <div class="etapa-number"><span class="highlight">01</span></div>
-                    <h3>Mapeamento e <span class="highlight">diagnóstico</span></h3>
-                    <p>Entrevistas confidenciais e estruturadas para captar informações do consciente e do inconsciente com o objetivo de compreender a pessoa e o alinhamento com a empresa.</p>
-                </div>
-                <div class="etapa-card">
-                    <div class="etapa-number"><span class="highlight">02</span></div>
-                    <h3>Planejamento de <span class="highlight">ação</span></h3>
-                    <p>Baseado no diagnóstico, estruturamos as melhores tomadas de ações que conversem com a métrica ainda construída com neurociência, para moldar o consciente e inconsciente.</p>
-                </div>
-                <div class="etapa-card">
-                    <div class="etapa-number"><span class="highlight">03</span></div>
-                    <h3>Implementação e <span class="highlight">reajustes</span></h3>
-                    <p>Com a validação do plano de ação, a implementação segue de acordo com a estratégia, de forma gradual para que o cérebro dos envolvidos não tenha grande resistência com as mudanças. E toda a estratégia é passível de alterações se provada a necessidade.</p>
-                </div>
-                <div class="etapa-card">
-                    <div class="etapa-number"><span class="highlight">04</span></div>
-                    <h3>Acompanhamento de métricas e <span class="highlight">projeções</span></h3>
-                    <p>As projeções realizadas nas etapas 2 e 3 são analisadas, e documentadas para futuras ações. Além de ser estimado a frequência de novas pesquisas para expansão de longo prazo.</p>
+
+        <div class="block block--white">
+            <div class="container">
+                <h2 class="section-titlee">A metodologia <span class="highlight">nas etapas</span></h2>
+                <div class="etapas-grid">
+                    <div class="etapa-card">
+                        <div class="etapa-number">01</div>
+                        <h3>Mapeamento e <span class="highlight">diagnóstico</span></h3>
+                        <p>Entrevistas confidenciais e estruturadas para captar informações do consciente e do inconsciente com o objetivo de compreender a pessoa e o alinhamento com a empresa.</p>
+                    </div>
+                    <div class="etapa-card">
+                        <div class="etapa-number">02</div>
+                        <h3>Planejamento de <span class="highlight">ação</span></h3>
+                        <p>Baseado no diagnóstico, estruturamos as melhores tomadas de ações que conversem com a métrica ainda construída com neurociência, para moldar o consciente e inconsciente.</p>
+                    </div>
+                    <div class="etapa-card">
+                        <div class="etapa-number">03</div>
+                        <h3>Implementação e <span class="highlight">reajustes</span></h3>
+                        <p>Com a validação do plano de ação, a implementação segue de acordo com a estratégia, de forma gradual para que o cérebro dos envolvidos não tenha grande resistência com as mudanças. Toda a estratégia é passível de alterações se provada a necessidade.</p>
+                    </div>
+                    <div class="etapa-card">
+                        <div class="etapa-number">04</div>
+                        <h3>Acompanhamento de métricas e <span class="highlight">projeções</span></h3>
+                        <p>As projeções realizadas nas etapas 2 e 3 são analisadas e documentadas para futuras ações, além de ser estimada a frequência de novas pesquisas para expansão de longo prazo.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- AREAS DE ATUAÇÃO -->
     <section class="areas" id="areas">
         <div class="container">
+            <span class="eyebrow">O que resolvemos</span>
             <h2 class="section-title">Áreas de <span class="highlight">Atuação</span></h2>
         </div>
-        <div class="areas-grid">
 
-            <div class="area-tile-wrapper">
-                <div class="area-tile area-tile--gold flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <h3><span class="highlight">Endomarketing</span></h3>
-                            <p>Fortalecemos o vínculo entre empresas e colaboradores por meio de estratégias que promovem pertencimento, engajamento e conexão com a cultura organizacional.</p>
-                        </div>
-                        <div class="flip-card-back">
-                            <p class="flip-back-text">Endomarketing, ou marketing interno, é um conjunto de estratégias voltadas para o público de colaboradores da empresa. O objetivo é alinhar, engajar e motivar a equipe por meio de ações que fortalecem a cultura organizacional, transformando os funcionários nos maiores defensores e promotores da marca.</p>
-                            <p class="flip-back-label">Você precisa de endomarketing, se enfrenta desafios como:</p>
-                            <ul class="flip-back-list">
-                                <li>Alta rotatividade ou absenteísmo</li>
-                                <li>Líderes com dificuldade para engajar as equipes</li>
-                                <li>Desalinhamento entre cultura e o comportamento das equipes</li>
-                                <li>Onboarding inexistente, ineficiente ou desatualizado</li>
-                                <li>Conflitos frequentes entre liderança e equipe</li>
-                            </ul>
-                            <p class="flip-back-more">Entre outros…</p>
+        <div class="service-detail-categories areas-categories">
+
+            <div class="service-category-group">
+                <div class="container service-category-inner">
+                    <div class="service-category-icon-area">
+                        <span class="service-category-big-icon"><i class="fas fa-bullhorn"></i></span>
+                        <h3 class="service-category-titlee">Endomarketing</h3>
+                        <p class="area-desc">Fortalecemos o vínculo entre empresas e colaboradores por meio de estratégias que promovem pertencimento, engajamento e conexão com a cultura organizacional.</p>
+                    </div>
+                    <div class="area-detail-area">
+                        <p class="area-detail-text">Endomarketing, ou marketing interno, é um conjunto de estratégias voltadas para o público de colaboradores da empresa. O objetivo é alinhar, engajar e motivar a equipe por meio de ações que fortalecem a cultura organizacional, transformando os funcionários nos maiores defensores e promotores da marca.</p>
+                        <p class="area-detail-label">Você precisa de endomarketing, se enfrenta desafios como:</p>
+                        <div class="service-category-items area-items">
+                            <div class="service-category-item">Alta rotatividade ou absenteísmo</div>
+                            <div class="service-category-item">Líderes com dificuldade para engajar as equipes</div>
+                            <div class="service-category-item">Desalinhamento entre cultura e comportamento das equipes</div>
+                            <div class="service-category-item">Onboarding inexistente, ineficiente ou desatualizado</div>
+                            <div class="service-category-item">Conflitos frequentes entre liderança e equipe</div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="area-tile-wrapper">
-                <div class="area-tile area-tile--light flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <h3>Diagnóstico <span class="highlight">organizacional</span></h3>
-                            <p>Utilizamos neurociência e análise organizacional para compreender perfis, identificar desafios e direcionar decisões mais estratégicas.</p>
+            <div class="service-category-group">
+                <div class="container service-category-inner service-category-inner--reverse">
+                    <div class="area-detail-area">
+                        <p class="area-detail-text">Processo de avaliação profunda usado para mapear o cenário atual de uma empresa. Ele identifica forças, fraquezas, gargalos operacionais e oportunidades de melhoria. O objetivo é embasar planos de ação assertivos para aumentar a eficiência e a competitividade do negócio.</p>
+                        <p class="area-detail-label">Você precisa de um diagnóstico organizacional, se enfrenta desafios como:</p>
+                        <div class="service-category-items area-items">
+                            <div class="service-category-item">Falta de acompanhamento do impacto das lideranças sobre a saúde das equipes</div>
+                            <div class="service-category-item">Alto índice de desligamentos</div>
+                            <div class="service-category-item">Dificuldade de identificar causas de afastamentos, faltas ou desligamentos</div>
+                            <div class="service-category-item">Dificuldades de retenção de profissionais estratégicos</div>
+                            <div class="service-category-item">Queda de produtividade sem causa aparente</div>
                         </div>
-                        <div class="flip-card-back">
-                            <p class="flip-back-text">Processo de avaliação profunda usado para mapear o cenário atual de uma empresa. Ele identifica forças, fraquezas, gargalos operacionais e oportunidades de melhoria. O objetivo é embasar planos de ação assertivos para aumentar a eficiência e a competitividade do negócio.</p>
-                            <p class="flip-back-label">Você precisa de um diagnóstico organizacional, se enfrenta desafios como:</p>
-                            <ul class="flip-back-list">
-                                <li>Falta de acompanhamento do impacto das lideranças sobre a saúde das equipes</li>
-                                <li>Alto índice de desligamentos</li>
-                                <li>Dificuldade de identificar causas de afastamentos, faltas ou desligamentos</li>
-                                <li>Dificuldades de retenção de profissionais estratégicos</li>
-                                <li>Queda de produtividade sem causa aparente</li>
-                            </ul>
+                    </div>
+                    <div class="service-category-icon-area service-category-icon-area--right">
+                        <span class="service-category-big-iconn"><i class="fas fa-magnifying-glass"></i></span>
+                        <h3 class="service-category-title">Diagnóstico <span class="highlight">organizacional</span></h3>
+                        <p class="area-desc">Utilizamos neurociência e análise organizacional para compreender perfis, identificar desafios e direcionar decisões mais estratégicas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="service-category-group">
+                <div class="container service-category-inner">
+                    <div class="service-category-icon-area">
+                        <span class="service-category-big-icon"><i class="fas fa-comments"></i></span>
+                        <h3 class="service-category-titlee">Comunicação <span class="highlight">interna</span></h3>
+                        <p class="area-desc">Transformamos informação em conexão, criando processos e campanhas que reduzem ruídos e fortalecem o alinhamento entre pessoas e objetivos.</p>
+                    </div>
+                    <div class="area-detail-area">
+                        <p class="area-detail-text">Troca de informações entre os colaboradores de uma empresa, com o objetivo de promover a união em torno de um objetivo comum.</p>
+                        <p class="area-detail-label">Você precisa ajustar a comunicação interna, se enfrenta desafios como:</p>
+                        <div class="service-category-items area-items">
+                            <div class="service-category-item">Informações que não chegam aos colaboradores</div>
+                            <div class="service-category-item">Retrabalho por falha na comunicação</div>
+                            <div class="service-category-item">Gestores/líderes que comunicam de forma inconsistente</div>
+                            <div class="service-category-item">Departamentos desalinhados ou com baixa colaboração entre si</div>
+                            <div class="service-category-item">Ausência de canais oficiais de comunicação</div>
+                            <div class="service-category-item">Dificuldade em dar feedbacks</div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div class="area-tile-wrapper">
-                <div class="area-tile area-tile--light flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <h3>Comunicação <span class="highlight">interna</span></h3>
-                            <p>Transformamos informação em conexão, criando processos e campanhas que reduzem ruídos e fortalecem o alinhamento entre pessoas e objetivos.</p>
-                        </div>
-                        <div class="flip-card-back">
-                            <p class="flip-back-text">Troca de informações entre os colaboradores de uma empresa, com o objetivo de promover a união em torno de um objetivo comum.</p>
-                            <p class="flip-back-label">Você precisa ajustar a comunicação interna, se enfrenta desafios como:</p>
-                            <ul class="flip-back-list">
-                                <li>Informações que não chegam nos colaboradores</li>
-                                <li>Retrabalho por falha na comunicação</li>
-                                <li>Gestores/líderes que comunicam de forma inconsistente</li>
-                                <li>Departamentos desalinhados ou com baixa colaboração entre si</li>
-                                <li>Ausência de canais oficiais de comunicação</li>
-                                <li>Dificuldade em dar feedbacks</li>
-                            </ul>
+            <div class="service-category-group">
+                <div class="container service-category-inner service-category-inner--reverse">
+                    <div class="area-detail-area">
+                        <p class="area-detail-text">Processo estratégico que analisa, identifica e documenta os elementos de uma empresa. Ele engloba a representação visual dos fluxos de trabalho, estrutura hierárquica e cultura corporativa, permitindo aos gestores entender o funcionamento da instituição e otimizar resultados.</p>
+                        <p class="area-detail-label">Você precisa mapear sua organização, se enfrenta desafios como:</p>
+                        <div class="service-category-items area-items">
+                            <div class="service-category-item">Funções mal definidas</div>
+                            <div class="service-category-item">Sobrecarga de responsabilidades e funções</div>
+                            <div class="service-category-item">Gargalos operacionais indetectáveis</div>
+                            <div class="service-category-item">Dependência excessiva em uma pessoa</div>
+                            <div class="service-category-item">Metas não atingidas sem justificativas claras</div>
                         </div>
                     </div>
-                </div>
-            </div>
-
-            <div class="area-tile-wrapper">
-                <div class="area-tile area-tile--gold flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <h3>Mapeamento organizacional<span class="highlight"></span></h3>
-                            <p>Mapeamos e acompanhamos fatores de risco psicossocial para apoiar ambientes de trabalho mais saudáveis, seguros e sustentáveis.</p>
-                        </div>
-                        <div class="flip-card-back">
-                            <p class="flip-back-text">Processo estratégico que analisa, identifica e documenta os elementos de uma empresa. Ele engloba a representação visual dos fluxos de trabalho, estrutura hierárquica e cultura corporativa, permitindo aos gestores entender o funcionamento da instituição e otimizar resultados.</p>
-                            <p class="flip-back-label">Você precisa mapear sua organização, se enfrenta desafios como:</p>
-                            <ul class="flip-back-list">
-                                <li>Funções mal definidas</li>
-                                <li>Sobrecarga de responsabilidades e funções</li>
-                                <li>Gargalos operacionais indetectáveis</li>
-                                <li>Dependência excessiva em uma pessoa</li>
-                                <li>Metas não atingidas sem justificativas claras</li>
-                            </ul>
-                        </div>
+                    <div class="service-category-icon-area service-category-icon-area--right">
+                        <span class="service-category-big-iconn"><i class="fas fa-diagram-project"></i></span>
+                        <h3 class="service-category-title">Mapeamento <span class="highlight">organizacional</span></h3>
+                        <p class="area-desc">Mapeamos e acompanhamos fatores de risco psicossocial para apoiar ambientes de trabalho mais saudáveis, seguros e sustentáveis.</p>
                     </div>
                 </div>
             </div>
@@ -189,14 +189,15 @@
         </div>
     </section>
 
+    <!-- SERVIÇOS -->
     <section class="services" id="services">
         <div class="container">
+            <span class="eyebrow">Soluções por público</span>
             <h2 class="section-title">Nossos <span class="highlight">Serviços</span></h2>
             <p class="section-subtitle">
                 Reunimos nossos serviços por categorias para facilitar a identificação das soluções mais adequadas a cada necessidade. Nossa atuação abrange diferentes desafios organizacionais, atendendo empresas de diversos portes e estruturas.
             </p>
 
-            <!-- Cards principais -->
             <div class="service-divisions">
                 <a href="pages/servicos-colaboradores.html" class="division-card-link">
                     <div class="division-card">
@@ -239,42 +240,18 @@
         </div>
     </section>
 
-
-    <section class="contact" id="contact">
-        <div class="container">
-            <h2 class="section-title">Faça um <span class="highlight">Orçamento</span></h2>
-            <div class="contact-actions">
-                <a class="whatsapp-button" href="https://wa.me/5511933460090" target="_blank" rel="noopener noreferrer">
-                    <i class="fab fa-whatsapp"></i> Falar no WhatsApp
-                </a>
-            </div>
-
-            <form class="contact-form" id="contactForm">
-                <div class="form-group">
-                    <input type="text" id="name" placeholder="Nome" required>
-                </div>
-                <div class="form-group">
-                    <input type="email" id="email" placeholder="Email" required>
-                </div>
-                <div class="form-group">
-                    <input type="tel" id="phone" placeholder="Telefone" required>
-                </div>
-                <div class="form-group">
-                    <textarea id="message" placeholder="Sua mensagem" required></textarea>
-                </div>
-                <button type="submit" class="submit-button">Enviar Mensagem</button>
-            </form>
-            <div id="status-message"></div>
-        </div>
-    </section>
-
+    <!-- QUEM SOMOS -->
     <section class="about" id="about">
-        <div class="container">
-            <h2 class="section-title">Quem <span class="highlight">Somos</span></h2>
-            <div class="about-split">
-                <div class="about-text">
+
+        <div class="block block--white">
+            <div class="container block-inner">
+                <div class="block-icon-area">
+                    <span class="block-big-icon"><i class="fas fa-seedling"></i></span>
+                    <h2 class="block-title">Quem <span class="highlight">somos</span></h2>
+                </div>
+                <div class="block-text-area">
                     <p>
-                        A LeFay nasceu da ideia de que <b>empresas são feitas por pessoas</b>, e, <b>cada pessoa carrega sua própria realidade</b>, vivência e forma de enxergar o mundo. Por isso, acreditamos que o endomarketing vai muito além da comunicação interna. Ele é a <b>ponte entre a cultura da empresa e as pessoas que constroem essa cultura</b> todos os dias.
+                        A LeFay nasceu da ideia de que <b>empresas são feitas por pessoas</b>, e cada pessoa carrega sua própria realidade, vivência e forma de enxergar o mundo. Por isso, acreditamos que o endomarketing vai muito além da comunicação interna. Ele é a <b>ponte entre a cultura da empresa e as pessoas que constroem essa cultura</b> todos os dias.
                     </p>
                     <p>
                         Nosso objetivo é <b>transformar a experiência do colaborador dentro das organizações</b>, criando ambientes mais humanos, estratégicos e alinhados com a essência de cada equipe. Desde ações de incentivo e fortalecimento da comunicação até treinamentos, desenvolvimento e planejamento interno, trabalhamos para <b>gerar conexão real entre empresas e pessoas</b>.
@@ -283,53 +260,16 @@
                         Porque quando uma empresa entende quem está por trás dos cargos, ela <b>deixa de apenas operar e começa a construir pertencimento</b>, engajamento e qualidade na jornada de trabalho.
                     </p>
                 </div>
-                <div class="about-image">
-                    <img src="./iconografia/Team goals-pana.png" alt="LeFay - Conexão entre empresas e pessoas">
-                </div>
             </div>
         </div>
-    </section>
 
-    <section class="mvv">
-        <div class="container">
-            <h2 class="section-title">Declarações <span class="highlight">Institucionais</span></h2>
-            <div class="mvv-grid">
-                <div class="mvv-card interactive" data-target="missao">
-                    <h3><span class="highlight">Missão</span></h3>
-                    <div class="mvv-details">
-                        <p>Transformar a cultura organizacional em conexão real entre empresas e colaboradores, traduzindo a essência de cada negócio em experiências, comunicações e estratégias que fortaleçam pertencimento, engajamento e qualidade na jornada de trabalho.</p>
-                    </div>
+        <div class="block block--light">
+            <div class="container block-inner block-inner--reverse">
+                <div class="block-icon-area">
+                    <span class="block-big-icon"><i class="fas fa-compass"></i></span>
+                    <h2 class="block-title">Nossa <span class="highlight">filosofia</span></h2>
                 </div>
-                <div class="mvv-card interactive" data-target="visao">
-                    <h3><span class="highlight">Visão</span></h3>
-                    <div class="mvv-details">
-                        <p>Ser referência na construção de modelos de trabalho mais humanos, estratégicos e sustentáveis, promovendo inovação nas relações corporativas, no desenvolvimento de pessoas e na valorização da diversidade, além de contribuir para a criação de novos padrões de reconhecimento e excelência no ambiente empresarial.</p>
-                    </div>
-                </div>
-                <div class="mvv-card interactive" data-target="valores">
-                    <h3><span class="highlight">Valores</span></h3>
-                    <div class="mvv-details">
-                        <ul class="values-list">
-                            <li>Respeito</li>
-                            <li>Equidade</li>
-                            <li>Cordialidade</li>
-                            <li>Desenvolvimento contínuo</li>
-                            <li>Parceria e trabalho em equipe</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="filosofia" id="filosofia">
-        <div class="container">
-            <h2 class="section-title">Nossa <span class="highlight">Filosofia</span></h2>
-            <div class="filosofia-content">
-                <div class="filosofia-image">
-                    <img src="./iconografia/Team spirit-pana.png" alt="Nossa filosofia - LeFay">
-                </div>
-                <div class="filosofia-text">
+                <div class="block-text-area">
                     <p>
                         A LeFay acredita que relações humanas saudáveis podem existir sem perder a consciência, os limites e o valor do próprio trabalho. Para nós, gentileza, empatia e colaboração não significam ausência de reconhecimento, mas sim a construção de relações mais <b>equilibradas, respeitosas e sustentáveis</b> para todos os envolvidos.
                     </p>
@@ -339,32 +279,100 @@
                     <p>
                         Também acreditamos no potencial de evolução das pessoas. Quando existe oportunidade, incentivo e um ambiente propício, o desenvolvimento deixa de ser individual e passa a <b>gerar benefícios coletivos</b>. Toda pessoa merece espaço para crescer, aprender e se tornar uma versão melhor de si mesma.
                     </p>
-                    <p>
-                        A excelência faz parte da essência da LeFay. Não como uma busca por perfeição inalcançável, mas como <b>compromisso genuíno de sempre entregar o melhor possível</b> dentro das condições presentes, evoluindo continuamente para alcançar resultados cada vez melhores.
-                    </p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container mvv-wrap">
+            <h2 class="section-titlee">Declarações <span class="highlight">institucionais</span></h2>
+            <div class="mvv-grid">
+                <div class="mvv-card interactive" data-target="missao">
+                    <span class="mvv-icon"><i class="fas fa-bullseye"></i></span>
+                    <h3>Missão</h3>
+                    <div class="mvv-details">
+                        <p>Transformar a cultura organizacional em conexão real entre empresas e colaboradores, traduzindo a essência de cada negócio em experiências, comunicações e estratégias que fortaleçam pertencimento, engajamento e qualidade na jornada de trabalho.</p>
+                    </div>
+                </div>
+                <div class="mvv-card interactive" data-target="visao">
+                    <span class="mvv-icon"><i class="fas fa-binoculars"></i></span>
+                    <h3>Visão</h3>
+                    <div class="mvv-details">
+                        <p>Ser referência na construção de modelos de trabalho mais humanos, estratégicos e sustentáveis, promovendo inovação nas relações corporativas, no desenvolvimento de pessoas e na valorização da diversidade, além de contribuir para a criação de novos padrões de reconhecimento e excelência no ambiente empresarial.</p>
+                    </div>
+                </div>
+                <div class="mvv-card interactive" data-target="valores">
+                    <span class="mvv-icon"><i class="fas fa-gem"></i></span>
+                    <h3>Valores</h3>
+                    <div class="mvv-details">
+                        <ul class="values-list">
+                            <li>Respeito</li>
+                            <li>Equidade</li>
+                            <li>Cordialidade</li>
+                            <li>Desenvolvimento contínuo</li>
+                            <li>Parceria e trabalho em equipe</li>
+                        </ul>
+                        <p class="values-extra">Valorizamos pessoas, incentivamos evolução e acreditamos que relações justas, éticas e colaborativas são a base para transformar a experiência de trabalho dentro das empresas.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
-    
+
+    <!-- CONTATO -->
+    <section class="contact" id="contact">
+        <div class="container contact-grid">
+            <div class="contact-intro">
+                <span class="eyebrow">Vamos conversar</span>
+                <h2 class="section-title contact-title">Faça um <span class="highlight">Orçamento</span></h2>
+                <p class="contact-lede">Conte um pouco sobre o desafio da sua empresa. Respondemos rápido, com clareza sobre os próximos passos.</p>
+                <a class="whatsapp-button" href="https://wa.me/5511933460090" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-whatsapp"></i> Falar no WhatsApp
+                </a>
+            </div>
+
+            <div class="contact-form-wrap">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" placeholder="Seu nome completo" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="voce@empresa.com" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Telefone</label>
+                        <input type="tel" id="phone" placeholder="(00) 00000-0000" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" placeholder="Conte-nos seu desafio" required></textarea>
+                    </div>
+                    <button type="submit" class="submit-button">Enviar mensagem</button>
+                </form>
+                <div id="status-message"></div>
+            </div>
+        </div>
+    </section>
+
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
         (function() {
             emailjs.init("zCgR-xovHaTNxg3l9");
         })();
-    
+
         document.getElementById('contactForm').addEventListener('submit', function(event) {
             event.preventDefault();
-            
+
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
             const phone = document.getElementById('phone').value;
             const message = document.getElementById('message').value;
             const statusMessage = document.getElementById('status-message');
-    
+
             statusMessage.textContent = '';
             statusMessage.className = '';
-    
+
             const templateParams = {
                 from_name: name,
                 from_email: email,
@@ -372,7 +380,7 @@
                 message: message,
                 to_email: 'publicidad3.ste@gmail.com'
             };
-    
+
             emailjs.send('service_eqh6zls', 'template_fo7yeye', templateParams)
                 .then(function(response) {
                     statusMessage.textContent = 'Mensagem enviada com sucesso! Entraremos em contato em breve.';
@@ -393,14 +401,14 @@
                 e.preventDefault();
                 const targetId = this.getAttribute('href');
                 if (targetId === '#') return;
-                
+
                 const targetElement = document.querySelector(targetId);
                 if (targetElement) {
                     targetElement.scrollIntoView({
                         behavior: 'smooth',
                         block: 'start'
                     });
-                    
+
                     const navLinks = document.getElementById('navLinks');
                     if (navLinks && navLinks.classList.contains('active')) {
                         navLinks.classList.remove('active');
@@ -412,7 +420,7 @@
         // MVV Cards - Interativos
         document.addEventListener('DOMContentLoaded', function() {
             const mvvCards = document.querySelectorAll('.mvv-card.interactive');
-            
+
             function closeAllCards() {
                 mvvCards.forEach(card => {
                     card.classList.remove('active');
@@ -464,7 +472,7 @@
                     e.stopPropagation();
                     navLinks.classList.toggle('active');
                 });
-                
+
                 navLinks.querySelectorAll('a').forEach(link => {
                     link.addEventListener('click', () => {
                         navLinks.classList.remove('active');
@@ -477,11 +485,21 @@
                     }
                 });
             }
+
+            // Navbar shrink on scroll
+            const navbar = document.querySelector('.navbar');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 40) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
         });
     </script>
 
     <footer class="footer">
-        <div class="container">
+        <div class="container footer-inner">
             <p>&copy; 2025 Lefay. Todos os direitos reservados.</p>
         </div>
     </footer>
