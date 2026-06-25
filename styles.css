@@ -1541,16 +1541,29 @@ section {
 
     .etapas-grid { grid-template-columns: 1fr; }
 
+    /* ===== FIX: título das Áreas de Atuação sempre ACIMA do
+       conteúdo no mobile, independente de o bloco ser normal
+       ou invertido (--reverse) no desktop. Em vez de resetar
+       a ordem para "initial" (que volta à ordem do DOM e faz
+       o título cair embaixo nos blocos invertidos), forçamos
+       explicitamente: ícone/título = order 1, conteúdo = order 2. ===== */
     .service-category-group { padding: 56px 0; }
-    .service-category-inner,
-    .service-category-inner--reverse .service-category-icon-area {
-        order: initial;
-    }
     .service-category-inner {
         grid-template-columns: 1fr;
         gap: 32px;
     }
-    .service-category-icon-area { align-items: center; text-align: center; }
+    .service-category-inner .service-category-icon-area,
+    .service-category-inner .service-category-icon-area--right,
+    .service-category-inner--reverse .service-category-icon-area,
+    .service-category-inner--reverse .service-category-icon-area--right {
+        order: 1 !important;
+        align-items: center;
+        text-align: center;
+    }
+    .service-category-inner .area-detail-area,
+    .service-category-inner--reverse .area-detail-area {
+        order: 2 !important;
+    }
     .area-desc { margin: 0 auto; }
     .area-detail-area { padding: 30px 26px; }
     .service-category-items { grid-template-columns: 1fr; }
